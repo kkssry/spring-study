@@ -1,5 +1,7 @@
 package kr.co.softcampus.beans;
 
-public class DataBean2 {
+public class DataBean4 {
+
+
 
 }

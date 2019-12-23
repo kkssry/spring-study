@@ -1,36 +1,39 @@
 package kr.co.softcampus.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+
 public class TestBean2 {
 
-    private DataBean2 data11;
-    private DataBean2 data22;
+    private int data;
+    private String data2;
+    private DataBean3 data3;
+    private DataBean4 data4;
 
     public TestBean2() {
-        System.out.println("TestBean2의 생성자");
     }
 
-    public TestBean2(DataBean2 data11, DataBean2 data22) {
-        this.data11 = data11;
-        this.data22 = data22;
+    @Autowired
+    public TestBean2(@Value("100")int data1, @Value("문자열")String data2, DataBean3 data3, DataBean4 data4) {
+        this.data = data1;
+        this.data2 = data2;
+        this.data3 = data3;
+        this.data4 = data4;
     }
 
-    public DataBean2 getData11() {
-        return data11;
+    public int getData() {
+        return data;
     }
 
-    public void setData11(DataBean2 data11) {
-        this.data11 = data11;
+    public String getData2() {
+        return data2;
     }
 
-    public DataBean2 getData22() {
-        return data22;
+    public DataBean3 getData3() {
+        return data3;
     }
 
-    public void setData22(DataBean2 data22) {
-        this.data22 = data22;
-    }
-
-    public void printData() {
-
+    public DataBean4 getData4() {
+        return data4;
     }
 }

@@ -8,30 +8,22 @@
        http://www.springframework.org/schema/context/spring-context.xsd"
        >
 
-    <bean id="xml1" class="kr.co.softcampus.beans.TestBean" lazy-init="true">
-        <constructor-arg value="100" type="int" index="0"/>
-        <constructor-arg value="문자열" index="1"/>
-        <constructor-arg ref="data_bean" />
+
+<!--    bean 클래스에 설정되어 있는 어노테이션을 이용한다.-->
+    <context:annotation-config/>
+
+    <bean id="xml1" class="kr.co.softcampus.beans.TestBean">
+        <property name="data1" value="100"/>
     </bean>
 
-    <bean id="xml11" class="kr.co.softcampus.beans.TestBean" lazy-init="true">
-        <property name="intData1" value="300"/>
-        <property name="stringData2" value="문자열3"/>
-        <property name="dataBean3" ref="data_bean"/>
-    </bean>
+    <bean class="kr.co.softcampus.beans.DataBean"/>
 
-    <bean id="data_bean" class="kr.co.softcampus.beans.DataBean" />
+    <bean id="obj4" class="kr.co.softcampus.beans.DataBean2"/>
+    <bean id="obj5" class="kr.co.softcampus.beans.DataBean2"/>
 
-    <bean id="data11" class="kr.co.softcampus.beans.DataBean2" />
-    <bean id="data22" class="kr.co.softcampus.beans.DataBean2" />
-
-    <bean id="xml2" class="kr.co.softcampus.beans.TestBean2" lazy-init="true"/>
-
-    <bean id="xml3" class="kr.co.softcampus.beans.TestBean2" lazy-init="true" autowire="byName"/>
+    <bean id="xml2" class="kr.co.softcampus.beans.TestBean2"/>
 
     <bean class="kr.co.softcampus.beans.DataBean3"/>
-
-    <bean id="xml4" class="kr.co.softcampus.beans.TestBean3" autowire="byType"/>
-
+    <bean class="kr.co.softcampus.beans.DataBean4"/>
 
 </beans>
