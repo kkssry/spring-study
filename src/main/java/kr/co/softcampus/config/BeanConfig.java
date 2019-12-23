@@ -1,17 +1,22 @@
 package kr.co.softcampus.config;
 
-import kr.co.softcampus.beans.DataBean;
-import kr.co.softcampus.beans.DataBean2;
-import kr.co.softcampus.beans.TestBean;
-import kr.co.softcampus.beans.TestBean2;
+import kr.co.softcampus.beans.*;
+import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.context.annotation.*;
 
 @Configuration
 public class BeanConfig {
 
+    @Bean(initMethod = "init", destroyMethod = "destroy")
+    @Lazy
+    public TestBean obj1() {
+        return new TestBean();
+    }
+
     @Bean
-    public TestBean java1() {
-        return new TestBean(100);
+    @Lazy
+    public TestBean2 obj2() {
+        return new TestBean2();
     }
 
     @Bean
@@ -20,18 +25,28 @@ public class BeanConfig {
     }
 
     @Bean
-    public DataBean2 obj4() {
+    public DataBean2 data2() {
         return new DataBean2();
     }
 
-    @Bean
-    public DataBean2 obj5() {
-        return new DataBean2();
+    @Bean(autowire = Autowire.BY_NAME)
+    public TestBean3 obj3() {
+        return new TestBean3();
     }
 
     @Bean
-    public TestBean2 java2() {
-        return new TestBean2();
+    public TestBean4 obj4() {
+        return new TestBean4();
+    }
+
+    @Bean
+    public TestBean5 obj5() {
+        return new TestBean5();
+    }
+
+    @Bean
+    public TestBean6 obj6() {
+        return new TestBean6();
     }
 
 }

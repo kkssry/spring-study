@@ -1,20 +1,13 @@
 package kr.co.softcampus.beans;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import javax.annotation.Resource;
 
-public class TestBean4 {
+public class TestBean5 {
 
-    public TestBean4() {
-        System.out.println("TestBean4 생성자");
-    }
-
-    @Autowired
-    @Qualifier("data1")
+    @Resource
     private DataBean data1;
 
-    @Autowired
-    @Qualifier("data2")
+    @Resource
     private DataBean2 data2;
 
     public DataBean getData1() {

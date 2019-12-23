@@ -9,21 +9,5 @@
        >
 
 
-<!--    bean 클래스에 설정되어 있는 어노테이션을 이용한다.-->
-    <context:annotation-config/>
-
-    <bean id="xml1" class="kr.co.softcampus.beans.TestBean">
-        <property name="data1" value="100"/>
-    </bean>
-
-    <bean class="kr.co.softcampus.beans.DataBean"/>
-
-    <bean id="obj4" class="kr.co.softcampus.beans.DataBean2"/>
-    <bean id="obj5" class="kr.co.softcampus.beans.DataBean2"/>
-
-    <bean id="xml2" class="kr.co.softcampus.beans.TestBean2"/>
-
-    <bean class="kr.co.softcampus.beans.DataBean3"/>
-    <bean class="kr.co.softcampus.beans.DataBean4"/>
 
 </beans>

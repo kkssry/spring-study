@@ -1,39 +1,22 @@
 package kr.co.softcampus.beans;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 public class TestBean2 {
 
-    private int data;
-    private String data2;
-    private DataBean3 data3;
-    private DataBean4 data4;
-
     public TestBean2() {
+        System.out.println("TestBean2의 생성자");
     }
 
-    @Autowired
-    public TestBean2(@Value("100")int data1, @Value("문자열")String data2, DataBean3 data3, DataBean4 data4) {
-        this.data = data1;
-        this.data2 = data2;
-        this.data3 = data3;
-        this.data4 = data4;
+    @PostConstruct
+    public void init2() {
+        System.out.println("TestBean2의 init");
     }
 
-    public int getData() {
-        return data;
+    @PreDestroy
+    public void destroy2() {
+        System.out.println("TestBean2의 destroy");
     }
 
-    public String getData2() {
-        return data2;
-    }
-
-    public DataBean3 getData3() {
-        return data3;
-    }
-
-    public DataBean4 getData4() {
-        return data4;
-    }
 }
