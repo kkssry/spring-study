@@ -1,80 +1,50 @@
 package kr.co.softcampus.main;
 
 import kr.co.softcampus.beans.*;
-import kr.co.softcampus.beans2.TestBean3;
-import kr.co.softcampus.beans2.TestBean4;
-import kr.co.softcampus.beans3.TestBean5;
 import kr.co.softcampus.config.BeanConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 
 public class MainClass {
 
     public static void main(String[] args) {
-        test6();
         System.out.println("=======================================");
-        testJavaVer6();
+        testJavaVer7();
         System.out.println("=======================================");
     }
 
-    private static void test6() {
-        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
+//    private static void test7() {
+//        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
+//
+//
+//
+//        ctx.close();
+//    }
 
-        TestBean xml1 = ctx.getBean(TestBean.class);
-        System.out.printf("xml1 : %s\n", xml1);
-
-        TestBean2 xml2 = ctx.getBean("xml2", TestBean2.class);
-        System.out.printf("xml2 : %s\n", xml2);
-
-        TestBean2 xml3 = ctx.getBean("xml3", TestBean2.class);
-        System.out.printf("xml3 : %s\n", xml3);
-
-        TestBean3 xml4 = ctx.getBean(TestBean3.class);
-        System.out.printf("xml4 : %s\n", xml4);
-
-        TestBean4 xml5 = ctx.getBean("bean4", TestBean4.class);
-        System.out.printf("xml5 : %s\n", xml5);
-
-        TestBean4 xml100 = ctx.getBean("xml100", TestBean4.class);
-        System.out.printf("xml100 : %s\n", xml100);
-
-        TestBean4 xml200 = ctx.getBean("xml200", TestBean4.class);
-        System.out.printf("xml200 : %s\n", xml200);
-
-        TestBean5 xml500 = ctx.getBean(TestBean5.class);
-        System.out.printf("xml500 : %s\n", xml500);
-
-
-        ctx.close();
-    }
-
-    private static void testJavaVer6() {
+    private static void testJavaVer7() {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(BeanConfig.class);
 
-        TestBean java1 = ctx.getBean(TestBean.class);
-        System.out.printf("java1 : %s\n", java1);
+        TestBean t1 = ctx.getBean(TestBean.class);
+        System.out.printf("t1.data1 : %s\n", t1.getData1());
+        System.out.printf("t1.data2 : %s\n", t1.getData2());
+        System.out.printf("t1.data3 : %s\n", t1.getData3());
+        System.out.printf("t1.data4 : %s\n", t1.getData4());
+        System.out.printf("t1.data5 : %s\n", t1.getData5());
 
-        TestBean2 java2 = ctx.getBean("java2", TestBean2.class);
-        System.out.printf("java2 : %s\n", java2);
+        System.out.println("=============================================");
 
-        TestBean2 java3 = ctx.getBean("java2", TestBean2.class);
-        System.out.printf("java3 : %s\n", java3);
+        TestBean2 t2 = ctx.getBean(TestBean2.class);
+        System.out.printf("t2.data1 %d\n", t2.getData1());
+        System.out.printf("t2.data2 %s\n", t2.getData2());
+        System.out.printf("t2.data3 %s\n", t2.getData3());
+        System.out.printf("t2.data4 %s\n", t2.getData4());
 
-        TestBean3 java4 = ctx.getBean(TestBean3.class);
-        System.out.printf("java4 : %s\n", java4);
+        System.out.println("=============================================");
 
-        TestBean4 java5 = ctx.getBean("bean4", TestBean4.class);
-        System.out.printf("java5 : %s\n", java5);
-
-        TestBean4 java100 = ctx.getBean("java100", TestBean4.class);
-        System.out.printf("java100 : %s\n", java100);
-
-        TestBean4 java200 = ctx.getBean("java200", TestBean4.class);
-        System.out.printf("java200 : %s\n", java200);
-
-        TestBean5 java500 = ctx.getBean(TestBean5.class);
-        System.out.printf("java500 : %s\n", java500);
+        TestBean3 java2 = ctx.getBean("java2", TestBean3.class);
+        System.out.printf("java2.data1 %d\n", java2.getData1());
+        System.out.printf("java2.data2 %s\n", java2.getData2());
+        System.out.printf("java2.data3 %s\n", java2.getData3());
+        System.out.printf("java2.data4 %s\n", java2.getData4());
 
         ctx.close();
     }
