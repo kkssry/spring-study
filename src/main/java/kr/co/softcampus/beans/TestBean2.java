@@ -6,6 +6,7 @@ public class TestBean2 {
     private DataBean2 data22;
 
     public TestBean2() {
+        System.out.println("TestBean2의 생성자");
     }
 
     public TestBean2(DataBean2 data11, DataBean2 data22) {

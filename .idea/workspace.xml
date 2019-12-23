@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a68f5f6-88d7-4d3c-98dc-ab310cd05bff" name="Default Changelist" comment="" />
+    <list default="true" id="3a68f5f6-88d7-4d3c-98dc-ab310cd05bff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/softcampus/config/BeanConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/softcampus/beans/DataBean2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/softcampus/beans/DataBean2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/softcampus/beans/TestBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/softcampus/beans/TestBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/softcampus/beans/TestBean2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/softcampus/beans/TestBean2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/softcampus/beans/TestBean3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/softcampus/beans/TestBean3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/softcampus/main/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/softcampus/main/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/kr/co/softcampus/beans/TestBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kr/co/softcampus/beans/TestBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/kr/co/softcampus/beans/TestBean2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kr/co/softcampus/beans/TestBean2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/kr/co/softcampus/beans/TestBean3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kr/co/softcampus/beans/TestBean3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/kr/co/softcampus/main/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kr/co/softcampus/main/MainClass.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,13 +33,18 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1VJrmAMjXweaBwHxAYkNvchdjhu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/kr/co/softcampus/beans" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -93,37 +112,37 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="70" key="#Project_Structure/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1576982688492" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1577019560818">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1577085006193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1577019560818" />
-    <state width="1493" height="262" key="GridCell.Tab.0.bottom" timestamp="1577020696688">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1577085006193" />
+    <state width="1493" height="179" key="GridCell.Tab.0.bottom" timestamp="1577085918196">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="262" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1577020696688" />
-    <state width="1493" height="262" key="GridCell.Tab.0.center" timestamp="1577020696688">
+    <state width="1493" height="179" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1577085918196" />
+    <state width="1493" height="179" key="GridCell.Tab.0.center" timestamp="1577085918196">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="262" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1577020696688" />
-    <state width="1493" height="262" key="GridCell.Tab.0.left" timestamp="1577020696687">
+    <state width="1493" height="179" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1577085918196" />
+    <state width="1493" height="179" key="GridCell.Tab.0.left" timestamp="1577085918195">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="262" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1577020696687" />
-    <state width="1493" height="262" key="GridCell.Tab.0.right" timestamp="1577020696688">
+    <state width="1493" height="179" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1577085918195" />
+    <state width="1493" height="179" key="GridCell.Tab.0.right" timestamp="1577085918196">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="262" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1577020696688" />
+    <state width="1493" height="179" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1577085918196" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1576984430901">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1576984430901" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1577019829478">
+    <state width="498" height="448" key="SwitcherDM" timestamp="1577085812072">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1577019829478" />
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1576996179023">
+    <state width="498" height="448" key="SwitcherDM/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1577085812072" />
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1577063127049">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1576996179023" />
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1577063127049" />
   </component>
 </project>

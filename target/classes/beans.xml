@@ -4,210 +4,31 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd"
        default-autowire="byName">
-<!--default-init-method="defaultInit" default-destroy-method="defaultDestroy">-->
 
-<!--객체가 생성될 때 생성자가 호출된 이후 init-method에 설정한 메서드가 자동으로 호출되고 IOC 컨테이너의 close 메서드를 호출하면-->
-<!--    객체가 소멸되며 destroy-method에 설정한 메서드가 자동으로 호출된다.-->
-    <bean id="obj1" class="kr.co.softcampus.beans.TestBean" lazy-init="true"/>
-
-    <bean id="obj2" class="kr.co.softcampus.beans.TestBean" lazy-init="true">
-        <constructor-arg value='100' type="int"/>
-    </bean>
-
-    <bean id="obj3" class="kr.co.softcampus.beans.TestBean" lazy-init="true">
-        <constructor-arg value='11.11' type="double"/>
-    </bean>
-
-    <bean id="obj4" class="kr.co.softcampus.beans.TestBean" lazy-init="true">
-        <constructor-arg value="문자열"/>
-    </bean>
-
-<!--    <bean id="obj5" class="kr.co.softcampus.beans.TestBean" lazy-init="true">-->
-<!--        <constructor-arg value="200" type="int"/>-->
-<!--        <constructor-arg value="22.22" type="double"/>-->
-<!--        <constructor-arg value="안녕하세요" type="java.lang.String"/>-->
-<!--    </bean>-->
-
-    <bean id="obj6" class="kr.co.softcampus.beans.TestBean" lazy-init="true">
-        <constructor-arg value="안녕하세요" type="java.lang.String"/>
-        <constructor-arg value="300" type="int"/>
-        <constructor-arg value="22.22" type="double"/>
-    </bean>
-
-    <bean id="obj7" class="kr.co.softcampus.beans.TestBean" lazy-init="true">
-        <constructor-arg value="44.44" type="double" index="1"/>
-        <constructor-arg value="300" type="int" index="0"/>
-        <constructor-arg value="안녕하세요" type="java.lang.String" index="2"/>
-    </bean>
-
-    <bean id="obj8" class="kr.co.softcampus.beans.TestBean2" lazy-init="true">
-        <constructor-arg>
-           <bean class="kr.co.softcampus.beans.DataBean"/>
-        </constructor-arg>
-        <constructor-arg>
-            <bean class="kr.co.softcampus.beans.DataBean"/>
-        </constructor-arg>
-    </bean>
-
-    <bean id="data_bean" class="kr.co.softcampus.beans.DataBean" scope="prototype"/>
-
-    <bean id="obj9" class="kr.co.softcampus.beans.TestBean2" lazy-init="true">
-        <constructor-arg ref="data_bean"/>
-        <constructor-arg ref="data_bean"/>
-    </bean>
-
-    <bean id="t1" class="kr.co.softcampus.beans.TestBean" lazy-init="true">
-        <property name="data1" value="100"/>
-        <property name="data2" value="11.11"/>
-        <property name="data3" value="안녕하세요"/>
-        <property name="data4" value="true"/>
-        <property name="data5">
-            <bean class="kr.co.softcampus.beans.DataBean"/>
-        </property>
-        <property name="data6" ref="data_bean"/>
-    </bean>
-
-    <bean id="t11" class="kr.co.softcampus.beans.TestBean" lazy-init="true">
-<!--        제네릭이 String인 List -->
-        <property name="list1">
-            <list>
-                <value>문자열1</value>
-                <value>문자열2</value>
-                <value>문자열3</value>
-            </list>
-        </property>
-
-<!--        제네릭이 Integer인 List-->
-        <property name="list2">
-            <list>
-                <value type="int">100</value>
-                <value type="int">200</value>
-                <value type="int">300</value>
-            </list>
-        </property>
-
-<!--        제네릭이 DataBean인 List-->
-        <property name="list3">
-            <list>
-                <bean class="kr.co.softcampus.beans.DataBean"/>
-                <bean class="kr.co.softcampus.beans.DataBean"/>
-                <ref bean="data_bean"/>
-                <ref bean="data_bean"/>
-            </list>
-        </property>
-
-<!--        제네릭이 String인 Set-->
-        <property name="set1">
-            <set>
-                <value>문자열1</value>
-                <value>문자열2</value>
-                <value>문자열3</value>
-                <value>문자열3</value>
-                <value>문자열3</value>
-            </set>
-        </property>
-
-<!--        제네릭이 Integer인 Set-->
-        <property name="set2">
-            <set>
-                <value type="int">100</value>
-                <value type="int">200</value>
-                <value type="int">300</value>
-                <value type="int">300</value>
-                <value type="int">300</value>
-            </set>
-        </property>
-
-<!--        제네릭이 DataBean인 Set-->
-        <property name="set3">
-            <set>
-                <bean class="kr.co.softcampus.beans.DataBean"/>
-                <bean class="kr.co.softcampus.beans.DataBean"/>
-                <ref bean="data_bean"/>
-                <ref bean="data_bean"/>
-                <ref bean="data_bean"/>
-                <ref bean="data_bean"/>
-            </set>
-        </property>
-
-        <property name="map1">
-            <map>
-                <entry key="a1" value="문자열"/>
-                <entry key="a2" value="100" value-type="int"/>
-                <entry key="a3">
-                    <bean class="kr.co.softcampus.beans.DataBean"/>
-                </entry>
-                <entry key="a4" value-ref="data_bean"/>
-                <entry key="a5">
-                    <list>
-                        <value>문자열1</value>
-                        <value>문자열2</value>
-                        <value>문자열3</value>
-                    </list>
-                </entry>
-            </map>
-        </property>
-
-<!--        property-->
-        <property name="prop1">
-            <props>
-                <prop key="p1">문자열1</prop>
-                <prop key="p2">문자열2</prop>
-                <prop key="p3">문자열3</prop>
-            </props>
-        </property>
-
-    </bean>
-
-    <bean id="obj11" class="kr.co.softcampus.beans.TestBean">
-        <property name="data11" ref="data_bean"/>
-        <property name="data22" ref="data_bean"/>
-    </bean>
-
-    <bean id="data11" class="kr.co.softcampus.beans.DataBean"/>
-    <bean id="data22" class="kr.co.softcampus.beans.DataBean"/>
-
-    <bean id="obj22" class="kr.co.softcampus.beans.TestBean" autowire="byName"/>
-
-    <bean id="obj33" class="kr.co.softcampus.beans.TestBean2" autowire="byType"/>
-
-    <bean id="data_bean2" class="kr.co.softcampus.beans.DataBean2"/>
-
-    <bean id="obj44" class="kr.co.softcampus.beans.TestBean3">
-        <constructor-arg ref="data_bean2" index="0"/>
-        <constructor-arg ref="data_bean2" index="1"/>
-    </bean>
-
-    <bean id="obj55" class="kr.co.softcampus.beans.TestBean3" autowire="constructor"/>
-
-    <bean id="obj66" class="kr.co.softcampus.beans.TestBean3">
-        <constructor-arg value="100" index="0" type="int"/>
+    <bean id="xml1" class="kr.co.softcampus.beans.TestBean" lazy-init="true">
+        <constructor-arg value="100" type="int" index="0"/>
         <constructor-arg value="문자열" index="1"/>
-        <constructor-arg ref="data_bean2" index="2"/>
-        <constructor-arg ref="data_bean2" index="3"/>
+        <constructor-arg ref="data_bean" />
     </bean>
 
-    <bean id="obj77" class="kr.co.softcampus.beans.TestBean3" autowire="constructor">
-        <constructor-arg value="200" index="0" type="int"/>
-        <constructor-arg value="문자열2" index="1"/>
+    <bean id="xml11" class="kr.co.softcampus.beans.TestBean" lazy-init="true">
+        <property name="intData1" value="300"/>
+        <property name="stringData2" value="문자열3"/>
+        <property name="dataBean3" ref="data_bean"/>
     </bean>
 
-    <bean id="obj88" class="kr.co.softcampus.beans.TestBean" />
-    <bean id="obj99" class="kr.co.softcampus.beans.TestBean" autowire="no"/>
+    <bean id="data_bean" class="kr.co.softcampus.beans.DataBean" />
 
+    <bean id="data11" class="kr.co.softcampus.beans.DataBean2" />
+    <bean id="data22" class="kr.co.softcampus.beans.DataBean2" />
 
-<!--    init-method 와 destroy-method가 설정되어 있지 않다면 default-init-method와 default-destroy-method에 설정되어 있는 메서드를 호출-->
-    <bean id="test2" class="kr.co.softcampus.beans.TestBean2" lazy-init="true" init-method="beanInit"/>
+    <bean id="xml2" class="kr.co.softcampus.beans.TestBean2" lazy-init="true"/>
 
-    <bean class="kr.co.softcampus.processor.TestBeanPostProcessor"/>
+    <bean id="xml3" class="kr.co.softcampus.beans.TestBean2" lazy-init="true" autowire="byName"/>
 
-<!--만약 init-method, destroy-method와 default-init-method, default-destroy-method에 등록되어 있는 메서드가 모두 있을 경우-->
-<!--    init-method, destroy-method에 설정되어 있는 메서드가 호출-->
-    <bean id="test3" class="kr.co.softcampus.beans.TestBean3" lazy-init="true" init-method="bean3Init" destroy-method="bean3Destroy"/>
+    <bean class="kr.co.softcampus.beans.DataBean3"/>
 
-<!--    default-init-method, default-destroy-method : 설정한 메서드가 존재하지 않으면 무시-->
-<!--    init-method, destroy-method : 설정한 메서드가 없으면 오류가 발생한다.-->
-    <bean id="test4" class="kr.co.softcampus.beans.TestBean4" lazy-init="true" />
+    <bean id="xml4" class="kr.co.softcampus.beans.TestBean3" autowire="byType"/>
 
 
 </beans>

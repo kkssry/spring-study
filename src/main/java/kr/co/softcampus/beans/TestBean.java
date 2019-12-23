@@ -7,8 +7,12 @@ import java.util.Set;
 
 public class TestBean {
 
-    private DataBean data11;
-    private DataBean data22;
+    private int intData1;
+    private String stringData2;
+    private DataBean dataBean3;
+
+    private DataBean dataB11;
+    private DataBean dataB22;
 
     private List<String> list1;
     private List<Integer> list2;
@@ -30,11 +34,22 @@ public class TestBean {
     private DataBean data6;
 
 
+    public TestBean(int intData1, String stringData2, DataBean dataBean3) {
+        this.intData1 = intData1;
+        this.stringData2 = stringData2;
+        this.dataBean3 = dataBean3;
+    }
+
     public TestBean() {
         System.out.println("TestBean의 생성자");
-        this.data1 = 0;
-        this.data2 = 0.0;
-        this.data3 = null;
+    }
+
+    public void init() {
+        System.out.println("TestBean의 init 메서드드");
+    }
+
+    public void destroy() {
+        System.out.println("TestBean의 destroy 메서드");
     }
 
     public TestBean(int data1) {
@@ -192,19 +207,45 @@ public class TestBean {
         this.prop1 = prop1;
     }
 
-    public DataBean getData11() {
-        return data11;
+    public DataBean getDataB11() {
+        return dataB11;
     }
 
-    public void setData11(DataBean data11) {
-        this.data11 = data11;
+    public void setDataB11(DataBean dataB11) {
+        this.dataB11 = dataB11;
     }
 
-    public DataBean getData22() {
-        return data22;
+    public DataBean getDataB22() {
+        return dataB22;
     }
 
-    public void setData22(DataBean data22) {
-        this.data22 = data22;
+    public void setDataB22(DataBean dataB22) {
+        this.dataB22 = dataB22;
     }
+
+    public DataBean getDataBean3() {
+        return dataBean3;
+    }
+
+    public void setDataBean3(DataBean dataBean3) {
+        this.dataBean3 = dataBean3;
+    }
+
+    public int getIntData1() {
+        return intData1;
+    }
+
+    public void setIntData1(int intData1) {
+        this.intData1 = intData1;
+    }
+
+    public String getStringData2() {
+        return stringData2;
+    }
+
+    public void setStringData2(String stringData2) {
+        this.stringData2 = stringData2;
+    }
+
+
 }
